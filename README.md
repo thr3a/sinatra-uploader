@@ -8,6 +8,7 @@
 git clone https://github.com/thr3a/sinatra-uploader.git
 cd sinatra-uploader
 bundle
+bundle exec rake db:create
 bundle exec rake db:migrate
 bundle exec rackup -o 0.0.0.0 -p 9393
 ```

@@ -1,0 +1,19 @@
+a.btn.btn-default href="/" TOPへ戻る
+h1 = @title
+- if !session[:responce].blank?
+	- if session[:responce][:code] == 400
+		.alert.alert-danger
+			ul
+			- for e in session[:responce][:messages]
+				li = e
+	- else
+		.alert.alert-success
+			p = session[:responce][:messages]
+form method="post" action="" enctype="multipart/form-data"
+	.form-group
+		label コメント
+		input.form-control type="text" name="comment"
+	.form-group
+		label 画像
+		input.form-control type="file" name="photo"
+	button.btn.btn-default type="submit" アップロード

@@ -1,0 +1,10 @@
+.jumbotron
+	h1 = @title
+	p 一世一代の画像アップローダーが、今ここに。
+	a.btn.btn-lg.btn-primary href="./new" 画像をアップロードする
+- if @photos
+	.row
+	- for photo in @photos
+		.col-sm-6.col-md-3.well
+			a href="./image/#{photo.id}"
+				img.center-block src="#{photo.file.thumb.url}"

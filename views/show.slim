@@ -1,0 +1,7 @@
+a.btn.btn-default href="/" TOPへ戻る
+.panel.panel-default
+	.panel-heading = @photo.comment
+	.panel-body
+		center
+			a href="#{@photo.file.url}"
+				img src="#{@photo.file.small.url}"
